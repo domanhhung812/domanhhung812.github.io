@@ -59,7 +59,7 @@ progress {
   appearance: none;
   border: none;
   background-color: transparent;
-  color: red;
+  color: var(--primary);
   z-index: 10;
 }
 
@@ -69,12 +69,12 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background-color: red;
+  background-color: var(--primary);
   z-index: 10;
 }
 
 progress::-moz-progress-bar {
-  background-color: red;
+  background-color: var(--primary);
   z-index: 10;
 }
 
@@ -90,7 +90,7 @@ progress::-moz-progress-bar {
 }
 
 .progress-bar {
-  background-color: #d4af37;
+  background-color: var(--primary);
   width: 0%;
   display: block;
   height: inherit;
