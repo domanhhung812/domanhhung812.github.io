@@ -9,6 +9,7 @@
 }
 html {
   font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Lato", sans-serif;
@@ -420,3 +421,25 @@ progress::-moz-progress-bar {
   font-weight: 300;
 }
 /* END CSS MAIL */
+/* CSS SCROLL */
+.scroll {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--primary);
+  border-radius: 5rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 99999;
+}
+.scroll__icon {
+  color: white;
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* END CSS SCROLL */
