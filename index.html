@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/fontawesome.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -24,6 +25,16 @@
       </progress>
       <header class="header">
         <nav class="nav">
+          <label for="collapse" class="btn__collapse">
+            <i class="fa fa-bars"></i>
+          </label>
+          <input
+            type="checkbox"
+            id="collapse"
+            style="display:none"
+            class="input__collapse"
+          />
+          <div class="nav__bg"></div>
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#about-us" class="nav__link">About us</a>
@@ -357,21 +368,21 @@
         }
       }
     });
-    //Opacity scroll
-    $(window).scroll(function(e) {
-      var scroll = $(this).scrollTop();
-      if (scroll === 0) {
-        $("#scroll").fadeOut();
-      } else if (scroll > 0) {
-        $("#scroll").fadeIn();
-      }
+  //Opacity scroll
+  $(window).scroll(function(e) {
+    var scroll = $(this).scrollTop();
+    if (scroll === 0) {
+      $("#scroll").fadeOut();
+    } else if (scroll > 0) {
+      $("#scroll").fadeIn();
+    }
+  });
+  //Scroll smooth
+  const btn = document.getElementById("scroll");
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
     });
-    //Scroll smooth
-    const btn = document.getElementById("scroll");
-    btn.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    });
+  });
 </script>
